@@ -19,7 +19,7 @@
 <br>
 
 
-🔗<strong> 사이트 예시 : </strong>  https://kwh97.github.io/CapstoneDesign-6th-Team/ <br><br>
+🔗<strong> 사이트 예시 : </strong>  https://kwh97.github.io/AI_based_Crop_Disease_Diagnosis_Service/ <br><br>
 📧<strong> Contact : </strong> 세종대학교 전자정보통신공학과 2022/1 캡스톤디자인6조 / kwh97512@naver.com <br><br>
 🔖<strong> Blog : </strong>https://kwh97.tistory.com
 
