@@ -8,7 +8,7 @@
 🛠<strong> 사용 툴 및 참고</strong>🛠   
 
 <img src="https://img.shields.io/badge/VisualStudioCode-32AAFF?style=flat-square&logo=visualstudiocode&logoColor=white"/> <img src="https://img.shields.io/badge/Teachable Machine-blue?style=flat-square&logo=Teachable Machine&logoColor=white"/> <img src="https://img.shields.io/badge/Google AI-yellow?style=flat-square&logo=Google AI&logoColor=white"/> <img src="https://img.shields.io/badge/AI hub-red?style=flat-square&logo=AI hub&logoColor=white"/><br>
-(Google AI, Teachable Machine - Visual Studio Code와 연동하여 AI Model을 개발하는데 사용된 Reference) 
+(Google AI, Teachable Machine - AI Model을 개발하는데 사용된 참고 자료 및 프로그램) 
 
 <br>
 
