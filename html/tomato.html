@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/model.css" />
+    <link rel="icon" href="../ai.png" />
+    <title>토마토 질병 확인 페이지</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="first-section">
+        <div class="image-container">
+          <div class="upload-image">
+            <h1>토마토 질병 확인</h1>
+            <input
+              type="file"
+              class="file-upload"
+              id="fileUpload"
+              accept="image/*"
+            />
+            <button class="btn" id="fileBtn">이미지 업로드</button>
+            <button
+              class="check-btn"
+              id="checkBtn"
+              type="button"
+              onclick="init()"
+            >
+              검사하기
+            </button>
+          </div>
+          <div class="preview-image" id="imagePreview"></div>
+          <div id="label-container"></div>
+        </div>
+        <div class="check-box">
+          <div class="tip">
+            <h2>✔ 진행방법</h2>
+            <p>
+              1. 먼저 좌측의 '이미지 업로드' 버튼을 통해 검사를 진행할 이미지를
+              업로드하세요.
+            </p>
+            <p>
+              2. 이미지를 업로드한 뒤, 새롭게 생성된 '검사하기' 버튼을 통해
+              검사를 진행하세요.
+            </p>
+          </div>
+          <div class="info">
+            <h2>✔ 어떤 질병을 확인하나요?</h2>
+            <h3>🍅 토마토 잎마름병</h3>
+            <p>
+              토마토 잎마름병은 밤낮의 일교차가 크고 비가 자주 내려 공기 중의
+              상대습도가 90~100%<br />정도로 높을때, 심하게 발생하며 1~2주 내에
+              시설 내 작물 전체를 황폐화시켜 치명적인<br />
+              피해를 주는 병입니다.
+              <span
+                >증상으로 줄기는 갈색으로 썩고, 과실의 병든 부위는 흑갈색으로<br />썩고
+                오그라드는 모양을 보입니다.
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="second-section">
+        <div class="result">
+          <h2>🧪 검사결과</h2>
+          <div class="check-result" id="checkResult">
+            검사가 완료되면 얼마 후, 이곳에 결과가 나타나요. 먼저 검사를 진행해
+            주세요!
+          </div>
+          <div class="result_disease" id="resultDisease">
+            <h2>이미지 검사 결과, 토마토 잎마름병으로 판단됩니다. 🤒</h2>
+            <h3>📝 조치 방법</h3>
+            <h4>
+              1. 환기를 철저히 하고 시설 내부가 과습하지 않도록 관리해야
+              합니다.<br />
+              2. 잦은 물 주기를 자제하고 물 빠짐을 좋게 해야 합니다.<br />
+              3. 항상 포장을 청결히 하고 병든 잎이나 줄기는 사전에 제거해줍니다.
+            </h4>
+            <h3>💊 관련 약품 및 농약</h3>
+            <h4>
+              1. 사이아조파미드(Cyazofamid) 살균제 ➜ 발생 초기부터 7일 간격으로
+              수확 3일전까지 3회 투여
+              <br />
+              2. 디메토모르프(Dimethomorph) 살균제 ➜ 발생 초기부터 7일 간격으로
+              수확 5일전까지 2회 투여
+            </h4>
+          </div>
+          <div class="result_normal" id="resultNormal">
+            <h2>이미지 검사 결과, 정상으로 판단됩니다.</h2>
+            <h3>📝 사전 예방 방법</h3>
+            <h4>
+              1. 환기를 철저히 하고 시설 내부가 과습하지 않도록 관리해야
+              합니다.<br />
+              2. 잦은 물 주기를 자제하고 물 빠짐을 좋게 해야 합니다.<br />
+              3. 항상 포장을 청결히 하고 병든 잎이나 줄기는 사전에 제거해줍니다.
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="content">
+          <div class="title">
+            <h3>인공지능 기반 작물 질병 진단 서비스</h3>
+            <h5>세종대학교 / 전자정보통신공학과 / 권장환</h5>
+          </div>
+          <div class="copyright">
+            <h4>CONTACT : zzang0512@naver.com</h4>
+            <h5>
+              COPYRIGHT 2022. JANGHWAN KWON. ALL RIGHTS RESERVED.
+              DESIGNED BY JANGHWANKWON.
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="webcam-container"></div>
+    <script src="../js/imageUpload.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script src="../js/tomato.js"></script>
+  </body>
+</html>

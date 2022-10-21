@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/model.css" />
+    <link rel="icon" href="../ai.png" />
+    <title>호박 질병 확인 페이지</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="first-section">
+        <div class="image-container">
+          <div class="upload-image">
+            <h1>호박 질병 확인</h1>
+            <input
+              type="file"
+              class="file-upload"
+              id="fileUpload"
+              accept="image/*"
+            />
+            <button class="btn" id="fileBtn">이미지 업로드</button>
+            <button
+              class="check-btn"
+              id="checkBtn"
+              type="button"
+              onclick="init()"
+            >
+              검사하기
+            </button>
+          </div>
+          <div class="preview-image" id="imagePreview"></div>
+          <div id="label-container"></div>
+        </div>
+        <div class="check-box">
+          <div class="tip">
+            <h2>✔ 진행방법</h2>
+            <p>
+              1. 먼저 좌측의 '이미지 업로드' 버튼을 통해 검사를 진행할 이미지를
+              업로드하세요.
+            </p>
+            <p>
+              2. 이미지를 업로드한 뒤, 새롭게 생성된 '검사하기' 버튼을 통해
+              검사를 진행하세요.
+            </p>
+          </div>
+          <div class="info">
+            <h2>✔ 어떤 질병을 확인하나요?</h2>
+            <h3>🎃 호박 노균병</h3>
+            <p>
+              주로 생육 중기 및 후기의 잎에서 발생하며, 초기에는 잎의 앞면에
+              퇴록된 부정형 반점이<br />
+              엷은 황색을 띠고, 잎 뒷면의 병반은 불분명 해집니다. 또한 병반은
+              아랫 잎에서 먼저 발생<br />하고, 위로 진전되며 결국에는 잎이 말라
+              죽습니다.
+              <span
+                >병든 잎은 잘 찢어지고, 황갈색을 보이<br />며, 환경이 적당하면
+                잎 뒷면에 이슬처럼 보이는곰팡이가 다량 형성되어 회백색으로
+                보입<br />니다.
+              </span>
+            </p>
+            <h3>🎃 호박 흰가루병</h3>
+            <p>
+              주로 잎에서 발생하며 잎자루와 줄기에도 발생합니다. 처음에는 흰색의
+              분생포자가 점점<br />
+              나타나고, 진전되면 잎 전체에 밀가루를 뿌려 놓은 듯한 증상으로
+              변합니다.
+              <span
+                >이 병으로<br />
+                인하여 잎이 고사되는 일은 드무나 잎을 병든 그루는 노화되어
+                수확기간이 단축됩니다.
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="second-section">
+        <div class="result">
+          <h2>🧪 검사결과</h2>
+          <div class="check-result" id="checkResult">
+            검사가 완료되면 얼마 후, 이곳에 결과가 나타나요. 먼저 검사를 진행해
+            주세요!
+          </div>
+          <div class="result_disease" id="resultDiseaseFirst">
+            <h2>이미지 검사 결과, 호박 노균병으로 판단됩니다. 🤒</h2>
+            <h3>📝 조치 방법</h3>
+            <h4>
+              1. 병든 잎은 조기에 제거하여 불에 태우거나 땅속 깊이 묻습니다.<br />
+              2. 포장을 청결히 하고 잎에 물방울이 장시간 맺혀 있지 않도록
+              관리합니다.<br />
+              3. 환기를 철저히 하고 토양이 과습하지 않도록 합니다.<br />
+              4. 등록약제를 이용하여 방제합니다.
+            </h4>
+            <h3>💊 관련 약품 및 농약</h3>
+            <h4>
+              1. 사이아조파미드(Cyazofamida) 살균제 ➜ 발생 초기부터 10일
+              간격으로 수확 14일전까지 최대 3회 투여
+              <br />
+              2. 메탈락실(Metalaxyl) 살균제 ➜ 발생 초기부터 7일 간격으로 수확
+              7일전까지 최대 3회 투여
+            </h4>
+          </div>
+          <div class="result_disease" id="resultDiseaseSecond">
+            <h2>이미지 검사 결과, 호박 흰가루병으로 판단됩니다. 🤒</h2>
+            <h3>📝 조치 방법</h3>
+            <h4>
+              1. 수확 후 병든 잔재물은 모두 제거합니다.<br />
+              2. 밀식을 피하고 통풍이 잘되게 합니다.<br />
+              3. 질소질 비료의 과용을 피하고 과번무 하지 않도록 합니다.
+            </h4>
+            <h3>💊 관련 약품 및 농약</h3>
+            <h4>
+              1. 보스칼리드(Boscalid) 살균제 ➜ 발생 초기부터 10일 간격으로 수확
+              7일전까지 최대 1회 투여
+              <br />
+              2. 크레속심메틸(Kresoxim-methyl) 살균제 ➜ 발생 초기부터 7일
+              간격으로 수확 7일전까지 최대 2회 투여
+            </h4>
+          </div>
+          <div class="result_normal" id="resultNormal">
+            <h2>이미지 검사 결과, 정상으로 판단됩니다.</h2>
+            <h3>📝 사전 예방 방법</h3>
+            <h3 class="diseases">✔ 호박 노균병</h3>
+            <h4>
+              1. 병든 잎은 조기에 제거하여 불에 태우거나 땅속 깊이 묻습니다.<br />
+              2. 포장을 청결히 하고 잎에 물방울이 장시간 맺혀 있지 않도록
+              관리합니다.<br />
+              3. 환기를 철저히 하고 토양이 과습하지 않도록 합니다.<br />
+              4. 등록약제를 이용하여 방제합니다.
+            </h4>
+            <h3 class="diseases">✔ 호박 흰가루병</h3>
+            <h4>
+              1. 수확 후 병든 잔재물은 모두 제거합니다.<br />
+              2. 밀식을 피하고 통풍이 잘되게 합니다.<br />
+              3. 질소질 비료의 과용을 피하고 과번무 하지 않도록 합니다.
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="content">
+          <div class="title">
+            <h3>인공지능 기반 작물 질병 진단 서비스</h3>
+            <h5>세종대학교 / 전자정보통신공학과 / 권장환</h5>
+          </div>
+          <div class="copyright">
+            <h4>CONTACT : zzang0512@naver.com</h4>
+            <h5>
+              COPYRIGHT 2022. JANGHWAN KWON. ALL RIGHTS RESERVED.
+              DESIGNED BY JANGHWANKWON.
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="webcam-container"></div>
+    <script src="../js/imageUpload.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script src="../js/pumpkin.js"></script>
+  </body>
+</html>

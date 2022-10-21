@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/model.css" />
+    <link rel="icon" href="../ai.png" />
+    <title>파 질병 확인 페이지</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="first-section">
+        <div class="image-container">
+          <div class="upload-image">
+            <h1>파 질병 확인</h1>
+            <input
+              type="file"
+              class="file-upload"
+              id="fileUpload"
+              accept="image/*"
+            />
+            <button class="btn" id="fileBtn">이미지 업로드</button>
+            <button
+              class="check-btn"
+              id="checkBtn"
+              type="button"
+              onclick="init()"
+            >
+              검사하기
+            </button>
+          </div>
+          <div class="preview-image" id="imagePreview"></div>
+          <div id="label-container"></div>
+        </div>
+        <div class="check-box">
+          <div class="tip">
+            <h2>✔ 진행방법</h2>
+            <p>
+              1. 먼저 좌측의 '이미지 업로드' 버튼을 통해 검사를 진행할 이미지를
+              업로드하세요.
+            </p>
+            <p>
+              2. 이미지를 업로드한 뒤, 새롭게 생성된 '검사하기' 버튼을 통해
+              검사를 진행하세요.
+            </p>
+          </div>
+          <div class="info">
+            <h3>🥬 파 검은무늬병</h3>
+            <p>
+              주로 잎과 꽃대에 발생하며, 처음에는 타원형 갈색 병반으로 나타나며,
+              진전되면 여러<br />
+              겹무늬의 큰 병반으로 확대됩니다.
+              <span
+                >병반 중앙에는 검은 포자층이 밀생하여 검게 보이며,<br />
+                심하면 잎 전체가 말라죽습니다.
+              </span>
+            </p>
+            <h3>🥬 파 노균병</h3>
+            <p>
+              주로 잎에 발생하며, 이른 아침에 증상을 관찰하기 용이합니다.<span
+                >작은 반점으로 시작되어<br />
+                잎 전체로 퍼지는데 병든 잎은 심하게 구부러지며 뒤틀립니다. 잎은
+                초기에 퇴록되고,<br />
+                진전되면 누렇게 변해 말라죽습니다.</span
+              >
+            </p>
+            <h3>🥬 파 녹병</h3>
+            <p>
+              주로 잎에 발생하며, 처음에는 융기된 아주작은 황색 병반으로
+              나타나고, 병이 진전되면<br />
+              병반 주위가 회갈색으로 변합니다.
+              <span
+                >점차 시간이 지나면 융기된 병반부가 파열되어 황색<br />
+                가루가 형성됩니다. 후에 융기된 부분이 흑갈색으로 변합니다.</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="second-section">
+        <div class="result">
+          <h2>🧪 검사결과</h2>
+          <div class="check-result" id="checkResult">
+            검사가 완료되면 얼마 후, 이곳에 결과가 나타나요. 먼저 검사를 진행해
+            주세요!
+          </div>
+          <div class="result_disease" id="resultDiseaseFirst">
+            <h2>이미지 검사 결과, 파 검은무늬병으로 판단됩니다. 🤒</h2>
+            <h3>📝 조치 방법</h3>
+            <h4>
+              1. 건전종자를 파종하거나 병에 잘 걸리지 않는 품종을 선택하여
+              재배합니다.<br />
+              2. 작물의 생육중에 비료가 부족하지 않도록 주의하고, 균형시비를
+              합니다.<br />
+              3. 등록약제를 이용하여 방제합니다.<br />
+            </h4>
+            <h3>💊 관련 약품 및 농약</h3>
+            <h4>
+              1. 아족시스트로빈(Azoxystrobin) 살균제 ➜ 발생 초기부터 10일
+              간격으로 수확 7일전까지 최대 5회 투여
+              <br />
+              2. 폴리옥신디(Polyoxin d) 살균제 ➜ 발생 초기부터 10일 간격으로
+              수확 7일전까지 최대 4회 투여
+            </h4>
+          </div>
+          <div class="result_disease" id="resultDiseaseSecond">
+            <h2>이미지 검사 결과, 파 노균병으로 판단됩니다. 🤒</h2>
+            <h3>📝 조치 방법</h3>
+            <h4>
+              1. 병든 잎과 포기는 조기에 제거하여 불에 태우거나 땅속 깊이
+              묻습니다.<br />
+              2. 포장을 청결히 하고 잎에 물방울이 장시간 맺혀 있지 않도록
+              관리합니다.<br />
+              3. 환기를 철저히 하고 토양이 과습하지 않도록 합니다.<br />
+              4. 육묘나 재배 중 토양이 오랜기간 과습하거나 물에 잠기지 않도록
+              하고 물빼기를 철저히 합니다.<br />
+            </h4>
+            <h3>💊 관련 약품 및 농약</h3>
+            <h4>
+              1. 아족시스트로빈(Azoxystrobin) 살균제 ➜ 발생 초기부터 7일
+              간격으로 수확 7일전까지 최대 5회 투여
+              <br />
+              2. 사이아조파미드(Cyazofamid) 살균제 ➜ 발생 초기부터 7일 간격으로
+              수확 7일전까지 최대 3회 투여
+            </h4>
+          </div>
+          <div class="result_disease" id="resultDiseaseThird">
+            <h2>이미지 검사 결과, 파 녹병으로 판단됩니다. 🤒</h2>
+            <h3>📝 조치 방법</h3>
+            <h4>
+              1. 수확 후 병든 잔재물을 깨끗이 제거합니다.<br />
+              2. 비료분이 부족하지 않도록 균형시비를 합니다.<br />
+              3. 해마다 발병이 심한 포장은 파속 이외의 작물로 돌려짓기하며, 병든
+              식물체는 일찍 제거합니다.
+            </h4>
+            <h3>💊 관련 약품 및 농약</h3>
+            <h4>
+              1. 아족시스트로빈(Azoxystrobin) 살균제 ➜ 발생 초기부터 7일
+              간격으로 수확 7일전까지 최대 5회 투여
+              <br />
+              2. 테부코나졸(Tebuconazole) 수화제 ➜ 발생 초기부터 10일 간격으로
+              수확 7일전까지 최대 3회 투여
+            </h4>
+          </div>
+          <div class="result_normal" id="resultNormal">
+            <h2>이미지 검사 결과, 정상으로 판단됩니다.</h2>
+            <h3>📝 사전 예방 방법</h3>
+            <h3 class="diseases">✔ 파 검은무늬병</h3>
+            <h4>
+              1. 수확 후 병든 잔재물을 깨끗이 제거합니다.<br />
+              2. 비료분이 부족하지 않도록 균형시비를 합니다.<br />
+              3. 해마다 발병이 심한 포장은 파속 이외의 작물로 돌려짓기하며, 병든
+              식물체는 일찍 제거합니다.
+            </h4>
+            <h3 class="diseases">✔ 파 노균병</h3>
+            <h4>
+              1. 병든 잎과 포기는 조기에 제거하여 불에 태우거나 땅속 깊이
+              묻습니다.<br />
+              2. 포장을 청결히 하고 잎에 물방울이 장시간 맺혀 있지 않도록
+              관리합니다.<br />
+              3. 환기를 철저히 하고 토양이 과습하지 않도록 합니다.<br />
+              4. 육묘나 재배 중 토양이 오랜기간 과습하거나 물에 잠기지 않도록
+              하고 물빼기를 철저히 합니다.
+            </h4>
+            <h3 class="diseases">✔ 파 녹병</h3>
+            <h4>
+              1. 수확 후 병든 잔재물을 깨끗이 제거합니다.<br />
+              2. 비료분이 부족하지 않도록 균형시비를 합니다.<br />
+              3. 해마다 발병이 심한 포장은 파속 이외의 작물로 돌려짓기하며, 병든
+              식물체는 일찍 제거합니다.
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="content">
+          <div class="title">
+            <h3>인공지능 기반 작물 질병 진단 서비스</h3>
+            <h5>세종대학교 / 전자정보통신공학과 / 권장환</h5>
+          </div>
+          <div class="copyright">
+            <h4>CONTACT : zzang0512@naver.com</h4>
+            <h5>
+              COPYRIGHT 2022. JANGHWAN KWON. ALL RIGHTS RESERVED.
+              DESIGNED BY JANGHWANKWON.
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="webcam-container"></div>
+    <script src="../js/imageUpload.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script src="../js/greenonion.js"></script>
+  </body>
+</html>

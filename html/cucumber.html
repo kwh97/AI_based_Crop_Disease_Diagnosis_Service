@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/model.css" />
+    <link rel="icon" href="../ai.png" />
+    <title>오이 질병 확인 페이지</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="first-section">
+        <div class="image-container">
+          <div class="upload-image">
+            <h1>오이 질병 확인</h1>
+            <input
+              type="file"
+              class="file-upload"
+              id="fileUpload"
+              accept="image/*"
+            />
+            <button class="btn" id="fileBtn">이미지 업로드</button>
+            <button
+              class="check-btn"
+              id="checkBtn"
+              type="button"
+              onclick="init()"
+            >
+              검사하기
+            </button>
+          </div>
+          <div class="preview-image" id="imagePreview"></div>
+          <div id="label-container"></div>
+        </div>
+        <div class="check-box">
+          <div class="tip">
+            <h2>✔ 진행방법</h2>
+            <p>
+              1. 먼저 좌측의 '이미지 업로드' 버튼을 통해 검사를 진행할 이미지를
+              업로드하세요.
+            </p>
+            <p>
+              2. 이미지를 업로드한 뒤, 새롭게 생성된 '검사하기' 버튼을 통해
+              검사를 진행하세요.
+            </p>
+          </div>
+          <div class="info">
+            <h2>✔ 어떤 질병을 확인하나요?</h2>
+            <h3>🥒 오이 노균병</h3>
+            <p>
+              초기에는 잎의 앞면에 퇴록된 부정형 반점이 생기고 엷은 황색을
+              띠는데, 잎 뒷면에는 불분<br />명하게 보입니다. 아랫잎에서 먼저
+              발생되고 위로 번지며, 반점들이 합쳐지면 병반은 커지<br />고 잎이
+              말라죽습니다.
+              <span
+                >이때 병든 잎은 잘 찢어지고, 황갈색을 띤다. 잎 뒷면에는 이슬처럼
+                <br />보이는 곰팡이가 다량 형성되어 흰색 혹은 회색으로 보입니다.
+              </span>
+            </p>
+            <h3>🥒 오이 흰가루병</h3>
+            <p>
+              <span
+                >주로 잎에 발생하며 처음에는 잎의 표면에 소량의 흰가루가
+                밀생하고, 진전되면 잎 전체가 <br />
+                흰가루로 뒤덮힙니다.</span
+              >오래된 병반상에서는 흰가루가 회백색으로 변하고, 흑색의 소립점<br />(자낭각)이
+              형성됩니다. 후에 병든 잎은 고사합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="second-section">
+        <div class="result">
+          <h2>🧪 검사결과</h2>
+          <div class="check-result" id="checkResult">
+            검사가 완료되면 얼마 후, 이곳에 결과가 나타나요. 먼저 검사를 진행해
+            주세요!
+          </div>
+          <div class="result_disease" id="resultDiseaseFirst">
+            <h2>이미지 검사 결과, 오이 노균병으로 판단됩니다. 🤒</h2>
+            <h3>📝 조치 방법</h3>
+            <h4>
+              1. 환기를 철저히 하고 하우스내 토양이 과습하지 않도록 합니다.<br />
+              2. 병든 잎은 조기에 제거하여 불에 태우거나 땅속 깊이 묻습니다.<br />
+              3. 등록약제를 이용하여 방제합니다.
+            </h4>
+            <h3>💊 관련 약품 및 농약</h3>
+            <h4>
+              코퍼옥시클로라이드.가스가마이신 (Copper oxychloride+Kasugamycin)
+              살균제 ➜ 발생 초기부터 10일 간격으로 투여, 경엽처리
+            </h4>
+          </div>
+          <div class="result_disease" id="resultDiseaseSecond">
+            <h2>이미지 검사 결과, 오이 흰가루병으로 판단됩니다. 🤒</h2>
+            <h3>📝 조치 방법</h3>
+            <h4>
+              1. 수확 후 병든 잔재물을 제거하여 태웁니다.<br />
+              2. 밀식을 피하고 통풍이 잘되게 해줍니다.<br />
+              3. 질소질 비료의 과용을 피합니다.
+            </h4>
+            <h3>💊 관련 약품 및 농약</h3>
+            <h4>
+              1. 보스칼리드.메트라페논(boscalid+Metrafenone) 살균제 ➜ 발생
+              초기부터 10일 간격으로 투여, 경엽처리
+            </h4>
+          </div>
+          <div class="result_normal" id="resultNormal">
+            <h2>이미지 검사 결과, 정상으로 판단됩니다.</h2>
+            <h3>📝 사전 예방 방법</h3>
+            <h3 class="diseases">✔ 오이 노균병</h3>
+            <h4>
+              1. 환기를 철저히 하고 하우스내 토양이 과습하지 않도록 합니다.<br />
+              2. 병든 잎은 조기에 제거하여 불에 태우거나 땅속 깊이 묻습니다.<br />
+              3. 등록약제를 이용하여 방제합니다.
+            </h4>
+            <h3 class="diseases">✔ 오이 흰가루병</h3>
+            <h4>
+              1. 수확 후 병든 잔재물을 제거하여 태웁니다.<br />
+              2. 밀식을 피하고 통풍이 잘되게 해줍니다.<br />
+              3. 질소질 비료의 과용을 피합니다.
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="content">
+          <div class="title">
+            <h3>인공지능 기반 작물 질병 진단 서비스</h3>
+            <h5>세종대학교 / 전자정보통신공학과 / 권장환</h5>
+          </div>
+          <div class="copyright">
+            <h4>CONTACT : zzang0512@naver.com</h4>
+            <h5>
+              COPYRIGHT 2022. JANGHWAN KWON. ALL RIGHTS RESERVED.
+              DESIGNED BY JANGHWANKWON.
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="webcam-container"></div>
+    <script src="../js/imageUpload.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script src="../js/cucumber.js"></script>
+  </body>
+</html>

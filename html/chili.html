@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/model.css" />
+    <link rel="icon" href="../ai.png" />
+    <title>고추 질병 확인 페이지</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="first-section">
+        <div class="image-container">
+          <div class="upload-image">
+            <h1>고추 질병 확인</h1>
+            <input
+              type="file"
+              class="file-upload"
+              id="fileUpload"
+              accept="image/*"
+            />
+            <button class="btn" id="fileBtn">이미지 업로드</button>
+            <button
+              class="check-btn"
+              id="checkBtn"
+              type="button"
+              onclick="init()"
+            >
+              검사하기
+            </button>
+          </div>
+          <div class="preview-image" id="imagePreview"></div>
+          <div id="label-container"></div>
+        </div>
+        <div class="check-box">
+          <div class="tip">
+            <h2>✔ 진행방법</h2>
+            <p>
+              1. 먼저 좌측의 '이미지 업로드' 버튼을 통해 검사를 진행할 이미지를
+              업로드하세요.
+            </p>
+            <p>
+              2. 이미지를 업로드한 뒤, 새롭게 생성된 '검사하기' 버튼을 통해
+              검사를 진행하세요.
+            </p>
+          </div>
+          <div class="info">
+            <h2>✔ 어떤 질병을 확인하나요?</h2>
+            <h3>🌶️ 고추 탄저병</h3>
+            <p>
+              고추 탄저병은 주로 과실에서 발생하며, 처음에 감염 부위가
+              수침상으로 약간 움푹 들어간<br />
+              원형 반점으로 나타납니다. 또한 병이 진전 되면 병반이 원형 또는
+              부정형의 겹무늬 증상
+              <br />
+              으로 확대 됩니다.
+              <span
+                >심하게 병든 과실은 비틀어지고 미이라처럼 말라버리며, 수확 후에
+                <br />건조하는 과정에서 병증상이 나타나는 것도 있습니다.
+              </span>
+            </p>
+            <h3>🌶️ 고추 흰가루병</h3>
+            <p>
+              고추 흰가루병은 주로 잎에서 발생하며, 처음에는 잎 뒷면의 엽맥을
+              따라 얇은 서리 모양의<br />
+              포자가 발생하고, 진전되면 표면에 황색의 병무늬가 형성됩니다.
+              <br />
+              <span
+                >심하게 발생하면 잎이 고사되어 떨어지고, 끝 부분의 새로 나온
+                잎만 남게 됩니다.
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="second-section">
+        <div class="result">
+          <h2>🧪 검사결과</h2>
+          <div class="check-result" id="checkResult">
+            검사가 완료되면 얼마 후, 이곳에 결과가 나타나요. 먼저 검사를 진행해
+            주세요!
+          </div>
+          <div class="result_disease" id="resultDiseaseFirst">
+            <h2>이미지 검사 결과, 고추 탄저병으로 판단됩니다. 🤒</h2>
+            <h3>📝 조치 방법</h3>
+            <h4>
+              1. 고온 다습한 환경에서 전파가 매우 빠르므로 장마 전에 대비를
+              해줍니다.<br />
+              2. 비바람을 통해 전파가 되기 때문에, 통풍이 잘 되도록 합니다.<br />
+              3. 비를 가려주는 시설을 설치하고, 물이 튀지 않게 배수로를 관리
+              해줍니다.<br />
+              4. 토양을 교체해주고, 이전 작물의 흔적을 완전히 제거해야 합니다.
+            </h4>
+            <h3>💊 관련 약품 및 농약</h3>
+            <h4>
+              1. 아족시스트로빈(Azoxystrobin) 살균제 ➜ 발생 초기부터 10일
+              간격으로 수확 3일전까지 최대 5회 투여
+              <br />
+              2. 보스칼리드(Boscalid) 살균제 ➜ 발생 초기부터 10일 간격으로 수확
+              5일전까지 최대 2회 투여
+            </h4>
+          </div>
+          <div class="result_disease" id="resultDiseaseSecond">
+            <h2>이미지 검사 결과, 고추 흰가루병으로 판단됩니다. 🤒</h2>
+            <h3>📝 조치 방법</h3>
+            <h4>
+              1. 건조한 상태에서 잘 발병하므로, 관수를 충분히 하여 건조 상태가
+              되지 않도록 합니다.<br />
+              2. 재배가 끝난 뒤, 이병 잎을 모아 제거합니다.<br />
+              3. 질소 비료의 과다 사용을 자제해야 합니다.
+            </h4>
+            <h3>💊 관련 약품 및 농약</h3>
+            <h4>
+              1. 아족시스트로빈(Azoxystrobin) 살균제 ➜ 발생 초기부터 10일
+              간격으로 수확 3일전까지 최대 5회 투여
+              <br />
+              2. 피디플루메토펜(Pydiflumetofen) 살균제 ➜ 발생 초기부터 10일
+              간격으로 수확 3일전까지 최대 3회 투여
+            </h4>
+          </div>
+          <div class="result_normal" id="resultNormal">
+            <h2>이미지 검사 결과, 정상으로 판단됩니다.</h2>
+            <h3>📝 사전 예방 방법</h3>
+            <h3 class="diseases">✔ 고추 탄저병</h3>
+            <h4>
+              1. 고온 다습한 환경에서 전파가 매우 빠르므로 장마 전에 대비를
+              해줍니다.<br />
+              2. 비바람을 통해 전파가 되기 때문에, 통풍이 잘 되도록 합니다.<br />
+              3. 비를 가려주는 시설을 설치하고, 물이 튀지 않게 배수로를 관리
+              해줍니다.
+            </h4>
+            <h3 class="diseases">✔ 고추 흰가루병</h3>
+            <h4>
+              1. 건조한 상태에서 잘 발병하므로, 관수를 충분히 하여 건조 상태가
+              되지 않도록 합니다.<br />
+              2. 재배가 끝난 뒤, 이병 잎을 모아 제거합니다.<br />
+              3. 질소 비료의 과다 사용을 자제해야 합니다.
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="content">
+          <div class="title">
+            <h3>인공지능 기반 작물 질병 진단 서비스</h3>
+            <h5>세종대학교 / 전자정보통신공학과 / 권장환</h5>
+          </div>
+          <div class="copyright">
+            <h4>CONTACT : zzang0512@naver.com</h4>
+            <h5>
+              COPYRIGHT 2022. JANGHWAN KWON. ALL RIGHTS RESERVED.
+              DESIGNED BY JANGHWANKWON.
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="webcam-container"></div>
+    <script src="../js/imageUpload.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script src="../js/chili.js"></script>
+  </body>
+</html>

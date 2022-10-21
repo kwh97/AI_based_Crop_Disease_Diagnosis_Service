@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+body {
+  background-color: #ececec;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.first-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.image-container {
+  background: #f6f6f6;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.image-container input {
+  display: none;
+}
+
+.image-container .preview-image img {
+  width: 250px;
+  height: 250px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.upload-image {
+  text-align: center;
+}
+
+.upload-image .btn {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, 
+  rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.upload-image .blocked {
+  display: none;
+}
+
+.upload-image .check-btn {
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, 
+  rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  background-color: white;
+  margin-left: 150px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  display:none;
+}
+
+.upload-image .uploded {
+  display: block;
+}
+
+.upload-image .btn:hover, .upload-image .check-btn:hover {
+  background-color: rgb(57, 57, 87);
+  color:white;
+  transition: all, 0.4s;
+  cursor: pointer;
+}
+
+.check-box > .tip {
+  background-color: #f6f6f6;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+  width: 620px;
+  height: 150px;
+  margin-left: 20px;
+  margin-top: -20px;
+}
+
+.check-box > .tip > h2 {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.check-box > .tip > p {
+  padding-left: 20px;
+}
+
+.check-box > .info {
+  background-color: #f6f6f6;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-left: 20px;
+  border-radius: 10px;
+  height: 360px;
+}
+
+.check-box > .info > h2 {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.check-box > .info > h3 {
+  padding-left: 20px;
+  margin-bottom: 0px;
+}
+
+.check-box > .info > p {
+  padding-left: 20px;
+  margin-top: 7px;
+}
+
+.check-box > .info span {
+  font-weight: bold;
+  background: #ddf6f9;
+  border-radius: 5px;
+}
+
+
+
+.second-section {
+  display: flex;
+  justify-content: center;
+}
+
+.second-section > .result {
+  width: 1040px;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-top: 20px;
+}
+
+.second-section > .result > h2 {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.second-section > .result > .check-result {
+  padding-left: 30px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.result_disease,
+.result_normal {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.result_disease h2,
+.result_normal h2 {
+  margin-top: -30px;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.result_disease h3,
+.result_normal h3 {
+  font-size: 22px;
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
+.result_disease h4,
+.result_normal h4 {
+  margin-top: 10px;
+  padding-left: 10px;
+  line-height: 2rem;
+}
+
+.result_disease {
+  display: none;
+}
+
+.result_normal {
+  display: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.footer > .content {
+  width: 1040px;
+  display: flex;
+  background-color: #242930;
+  border-radius: 10px;
+  color: #f6f6f6;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.footer > .content > .title {
+  margin-left: 30px;
+}
+
+.footer > .content > .copyright {
+  line-height: 1.5rem;
+  margin-left: 60px;
+}
+
+.footer h3 {
+  margin-top: 10px;
+}
+
+.footer h4 {
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+
+.footer h5 {
+  margin-bottom: 10px;
+}
+
+
+
+
+

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/model.css" />
+    <link rel="icon" href="../ai.png" />
+    <title>배추 질병 확인 페이지</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="first-section">
+        <div class="image-container">
+          <div class="upload-image">
+            <h1>배추 질병 확인</h1>
+            <input
+              type="file"
+              class="file-upload"
+              id="fileUpload"
+              accept="image/*"
+            />
+            <button class="btn" id="fileBtn">이미지 업로드</button>
+            <button
+              class="check-btn"
+              id="checkBtn"
+              type="button"
+              onclick="init()"
+            >
+              검사하기
+            </button>
+          </div>
+          <div class="preview-image" id="imagePreview"></div>
+          <div id="label-container"></div>
+        </div>
+        <div class="check-box">
+          <div class="tip">
+            <h2>✔ 진행방법</h2>
+            <p>
+              1. 먼저 좌측의 '이미지 업로드' 버튼을 통해 검사를 진행할 이미지를
+              업로드하세요.
+            </p>
+            <p>
+              2. 이미지를 업로드한 뒤, 새롭게 생성된 '검사하기' 버튼을 통해
+              검사를 진행하세요.
+            </p>
+          </div>
+          <div class="info">
+            <h2>✔ 어떤 질병을 확인하나요?</h2>
+            <h3>🥬 배추 노균병</h3>
+            <p>
+              발병 초기에는 연한 황색의 작은 부정형 병반이 형성되고, 잎 뒷면에
+              하얀 곰팡이가 다량<br />
+              형성됩니다.
+              <span
+                >유묘기에 발생하면 잎은 쉽게 떨어지며 묘 전체가 죽지만, 셍육
+                후기에 감연된
+                <br />
+                잎은 떨어지지 않고, 작은 병반들이 합쳐져 잎 전체가 황록색에서
+                황갈색으로 변하며 말라<br />죽습니다.</span
+              >
+            </p>
+            <h3>🥬 배추 검음썩음병</h3>
+            <p>
+              처음에는 잎 가장자리가 황색으로 변하고, 엽맥이 흑색으로 변합니다.
+              진전되면 담황색<br />
+              부정형 반점으로 나타나고, 잎의 아래쪽으로 진전되면서 잎이 흑황색
+              내지 흑색으로 <br />변하면서 마릅니다.
+
+              <span
+                >심하게 감염된 잎은 전체적으로 말라죽으며. 뿌리가 감염되면 유관
+                <br />속이 흑색으로 변하고 지상부가 시들어 죽습니다.
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="second-section">
+        <div class="result">
+          <h2>🧪 검사결과</h2>
+          <div class="check-result" id="checkResult">
+            검사가 완료되면 얼마 후, 이곳에 결과가 나타나요. 먼저 검사를 진행해
+            주세요!
+          </div>
+          <div class="result_disease" id="resultDiseaseFirst">
+            <h2>이미지 검사 결과, 배추 노균병으로 판단됩니다. 🤒</h2>
+            <h3>📝 조치 방법</h3>
+            <h4>
+              1. 병든 잎은 빨리 제거하여 불에 태우거나 땅속 깊이 묻습니다.<br />
+              2. 포장을 청결히 하고 잎에 물방울이 장시간 맺혀 있지 않도록
+              관리합니다.<br />
+              3. 환기를 철저히 하고 토양이 과습하지 않도록 합니다.<br />
+              4. 등록약제를 이용하여 방제합니다.
+            </h4>
+            <h3>💊 관련 약품 및 농약</h3>
+            <h4>
+              1. 아족시스트로빈(Azoxystrobin) 살균제 ➜ 발생 초기부터 7일
+              간격으로 수확 14일전까지 최대 2회 투여
+              <br />
+              2. 사이아조파미드(Cyazofamida) 살균제 ➜ 발생 초기부터 10일
+              간격으로 수확 14일전까지 최대 3회 투여
+            </h4>
+          </div>
+          <div class="result_disease" id="resultDiseaseSecond">
+            <h2>이미지 검사 결과, 배추 검음썩음병으로 판단됩니다. 🤒</h2>
+            <h3>📝 조치 방법</h3>
+            <h4>
+              1. 건전한 종자를 사용하거나 55℃에서 5분간 온탕침지합니다.<br />
+              2. 해충을 제거하여 식물에 상처가 생기는 것을 막아줍니다.<br />
+              3. 등록약제를 이용하여 방제합니다.
+            </h4>
+            <h3>💊 관련 약품 및 농약</h3>
+            <h4>
+              1. 아시벤졸라-에스-메틸(Acibenzolar-S-methyl) 살균제 ➜ 발생 전,
+              10일 간격으로 수확 7일전까지 최대 5회 투여
+              <br />
+              2. 피리벤카브(Pyribencarb) 살균제 ➜ 발생 초기부터 10일 간격으로
+              수확 7일전까지 최대 3회 투여
+            </h4>
+          </div>
+          <div class="result_normal" id="resultNormal">
+            <h2>이미지 검사 결과, 정상으로 판단됩니다.</h2>
+            <h3>📝 사전 예방 방법</h3>
+            <h3 class="diseases">✔ 배추 노균병</h3>
+            <h4>
+              1. 병든 잎은 빨리 제거하여 불에 태우거나 땅속 깊이 묻습니다.<br />
+              2. 포장을 청결히 하고 잎에 물방울이 장시간 맺혀 있지 않도록
+              관리합니다.<br />
+              3. 환기를 철저히 하고 토양이 과습하지 않도록 합니다.<br />
+              4. 등록약제를 이용하여 방제합니다.
+            </h4>
+            <h3 class="diseases">✔ 배추 검음썩음병</h3>
+            <h4>
+              1. 건전한 종자를 사용하거나 55℃에서 5분간 온탕침지합니다.<br />
+              2. 해충을 제거하여 식물에 상처가 생기는 것을 막아줍니다.<br />
+              3. 등록약제를 이용하여 방제합니다.
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="content">
+          <div class="title">
+            <h3>인공지능 기반 작물 질병 진단 서비스</h3>
+            <h5>세종대학교 / 전자정보통신공학과 / 권장환</h5>
+          </div>
+          <div class="copyright">
+            <h4>CONTACT : zzang0512@naver.com</h4>
+            <h5>
+              COPYRIGHT 2022. JANGHWAN KWON. ALL RIGHTS RESERVED.
+              DESIGNED BY JANGHWANKWON.
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="webcam-container"></div>
+    <script src="../js/imageUpload.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script src="../js/cabbage.js"></script>
+  </body>
+</html>
